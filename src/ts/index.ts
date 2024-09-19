@@ -8,21 +8,7 @@ const serverUrl = "http://localhost:5000";
 
 function main() {
 	const product = new Product();
-
-	const getProducts = async () => {
-		const response = await axios.get(`${serverUrl}/products`);
-		const products = await response.data;
-
-		return products;
-	};
-
-	try {
-		getProducts().then((response: Promise<IProduct[]>) =>
-			product.loadProducts(response),
-		);
-	} catch (err) {
-		console.error(err);
-	}
+	product.init(serverUrl);
 }
 
 document.addEventListener("DOMContentLoaded", main);

@@ -4,14 +4,19 @@
 @import 'header';
 @import 'category';
 @import 'shelf';
+@import 'aside';
 
 .container {
   max-width: 1180px;
-  margin: 0 auto;
+  margin: 0 1rem;
 
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: $preto;
+
+  @media (width >= 1280px) {
+    margin: 0 auto;
+  }
 }
 
 h1 {

@@ -2,9 +2,34 @@
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 65px;
+  h1 {
+    margin: 0 auto;
+
+    @media (width >= 768px) {
+      margin: 0;
+    }
+  }
+
+  .categoryHeader-orderBy {
+    display: none;
+
+    @media (width >= 768px) {
+      display: block;
+    }
+  }
+
+  margin-bottom: 1rem;
+
+  @media (width >= 768px) {
+    margin-bottom: 65px;
+  }
 }
 
 .category-content {
   display: flex;
+  flex-direction: column;
+
+  @media (width >= 768px) {
+    flex-direction: row;
+  }
 }

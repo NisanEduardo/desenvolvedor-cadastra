@@ -1,0 +1,107 @@
+aside {
+  display: flex;
+  height: 100%;
+
+  margin-bottom: 35px;
+
+  > div {
+    flex: 1;
+  }
+
+  .openFiltersContext {
+    border: 1px solid $cinza2;
+    background-color: transparent;
+
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $cinza2;
+
+    width: 100%;
+    height: 49px;
+  }
+
+  .orderByContext {
+    @media (width >= 768px) {
+      display: none;
+    }
+  }
+}
+
+.filterByContext {
+  &--container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $branco;
+
+    header {
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      color: $cinza2;
+      display: flex;
+      justify-content: space-between;
+
+      padding: auto 1rem;
+
+      span {
+        width: 18px;
+        height: 18px;
+
+        color: transparent;
+
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url('data:image/svg+xml,<svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 18.852L17.5547 1.00001" stroke="black"/><line y1="-0.5" x2="25.2899" y2="-0.5" transform="matrix(0.711746 0.702437 -0.874311 0.485367 0 1.23547)" stroke="black"/></svg>');
+      }
+    }
+
+    &__content {
+      padding: 0 1rem;
+
+      &--options {
+        max-height: 0;
+        overflow: hidden;
+
+        transition: all .5s;
+      }
+
+      fieldset {
+        margin: 15px 0;
+        cursor: pointer;
+        
+        legend {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          width: 100%;
+
+          color: $cinza2;
+
+          font-size: 1.5rem;
+          font-weight: 400;
+
+          text-transform: uppercase;
+          letter-spacing: .1rem;
+
+          span {
+            width: 18px;
+            height: 13px;
+
+            display: block;
+
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url('data:image/svg+xml,<svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L10 14L19 1.0135" stroke="%23666666" stroke-linecap="round"/></svg>');
+          }
+        }
+      }
+    }
+  }
+
+  .filterByContext--container__content--options.active {
+    max-height: 99em;
+  }
+}

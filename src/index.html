@@ -22,7 +22,7 @@
 
     <main class="container">
       <div class="categoryHeader">
-        <h1>Blusas</h1>
+        <h1 id="headerTitle">Blusas</h1>
 
         <div class="categoryHeader-orderBy">
           <select name="OrderBy" id="OrderBy">
@@ -36,236 +36,129 @@
 
       <div class="category-content">
         <aside>
-          <div>
-            <fieldset>
-              <legend>Cores</legend>
-
-              <div>
-                <input type="checkbox" id="Amarelo" name="Amarelo" />
-                <label for="amarelo">Amarelo</label>
-              </div>
-
-              <div>
-                <input type="checkbox" id="Azul" name="Azul" />
-                <label for="Azul">Azul</label>
-              </div>
-
-              <div>
-                <input type="checkbox" id="Branco" name="Branco" />
-                <label for="Branco">Branco</label>
-              </div>
-
-              <div>
-                <input type="checkbox" id="Cinza" name="Cinza" />
-                <label for="Cinza">Cinza</label>
-              </div>
-
-              <div>
-                <input type="checkbox" id="Laranja" name="Laranja" />
-                <label for="Laranja">Laranja</label>
-              </div>
-
-              <div>
-                <input type="checkbox" id="Verde" name="Verde" />
-                <label for="Verde">Verde</label>
-              </div>
-
-              <div>
-                <input type="checkbox" id="Vermelho" name="Vermelho" />
-                <label for="Vermelho">Vermelho</label>
-              </div>
-
-              <div>
-                <input type="checkbox" id="Preto" name="Preto" />
-                <label for="Preto">Preto</label>
-              </div>
-
-              <div>
-                <input type="checkbox" id="Rosa" name="Rosa" />
-                <label for="Rosa">Rosa</label>
-              </div>
-
-              <div>
-                <input type="checkbox" id="Vinho" name="Vinho" />
-                <label for="Vinho">Vinho</label>
-              </div>
-            </fieldset>
+          <div class="orderByContext">
+            <button class="openFiltersContext" id="openOrderBy">Ordenar</button>
           </div>
 
-          <div>
-            <fieldset>
-              <legend>Tamanhos</legend>
+          <div class="filterByContext">
+            <button class="openFiltersContext" id="openFilterBy">
+              Filtrar
+            </button>
 
-              <div>
-                <input type="checkbox" id="p" name="p" />
-                <label for="p">p</label>
-              </div>
+            <div class="filterByContext--container">
+              <header class="filterByContext--container__header">
+                Filtrar
+                <span>X</span>
+              </header>
 
-              <div>
-                <input type="checkbox" id="m" name="m" />
-                <label for="m">m</label>
-              </div>
+              <section class="filterByContext--container__content">
+                <fieldset class="openFilterContextMenu">
+                  <legend>Cores <span></span></legend>
 
-              <div>
-                <input type="checkbox" id="g" name="g" />
-                <label for="g">g</label>
-              </div>
+                  <div class="filterByContext--container__content--options">
+                    <div>
+                      <input type="checkbox" id="Amarelo" name="Amarelo" />
+                      <label for="amarelo">Amarelo</label>
+                    </div>
 
-              <div>
-                <input type="checkbox" id="gg" name="gg" />
-                <label for="gg">gg</label>
-              </div>
+                    <div>
+                      <input type="checkbox" id="Azul" name="Azul" />
+                      <label for="Azul">Azul</label>
+                    </div>
 
-              <div>
-                <input type="checkbox" id="u" name="u" />
-                <label for="u">u</label>
-              </div>
+                    <div>
+                      <input type="checkbox" id="Branco" name="Branco" />
+                      <label for="Branco">Branco</label>
+                    </div>
 
-              <div>
-                <input type="checkbox" id="36" name="36" />
-                <label for="36">36</label>
-              </div>
+                    <div>
+                      <input type="checkbox" id="Cinza" name="Cinza" />
+                      <label for="Cinza">Cinza</label>
+                    </div>
 
-              <div>
-                <input type="checkbox" id="38" name="38" />
-                <label for="38">38</label>
-              </div>
+                    <div>
+                      <input type="checkbox" id="Laranja" name="Laranja" />
+                      <label for="Laranja">Laranja</label>
+                    </div>
 
-              <div>
-                <input type="checkbox" id="40" name="40" />
-                <label for="40">40</label>
-              </div>
-            </fieldset>
+                    <div>
+                      <input type="checkbox" id="Verde" name="Verde" />
+                      <label for="Verde">Verde</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="Vermelho" name="Vermelho" />
+                      <label for="Vermelho">Vermelho</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="Preto" name="Preto" />
+                      <label for="Preto">Preto</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="Rosa" name="Rosa" />
+                      <label for="Rosa">Rosa</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="Vinho" name="Vinho" />
+                      <label for="Vinho">Vinho</label>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="openFilterContextMenu">
+                  <legend>Tamanhos <span></span></legend>
+
+                  <div class="filterByContext--container__content--options">
+                    <div>
+                      <input type="checkbox" id="p" name="p" />
+                      <label for="p">p</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="m" name="m" />
+                      <label for="m">m</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="g" name="g" />
+                      <label for="g">g</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="gg" name="gg" />
+                      <label for="gg">gg</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="u" name="u" />
+                      <label for="u">u</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="36" name="36" />
+                      <label for="36">36</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="38" name="38" />
+                      <label for="38">38</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="40" name="40" />
+                      <label for="40">40</label>
+                    </div>
+                  </div>
+                </fieldset>
+              </section>
+            </div>
           </div>
         </aside>
 
-        <section class="shelf">
-          <article class="shelf-item">
-            <figure class="shelf-item__image">
-              <img src="./img/img_2.png" alt="Product name" />
-            </figure>
-            <div class="shelf-item__infos">
-              <span class="shelf-item__infos--name">Producname</span>
-              <span class="shelf-item__infos--price">price</span>
-              <span class="shelf-item__infos--installments">installments</span>
-            </div>
-            <footer>
-              <button type="button">Comprar</button>
-            </footer>
-          </article>
-
-          <article class="shelf-item">
-            <figure class="shelf-item__image">
-              <img src="./img/img_10.png" alt="Product name" />
-            </figure>
-            <div class="shelf-item__infos">
-              <span class="shelf-item__infos--name">Producname</span>
-              <span class="shelf-item__infos--price">price</span>
-              <span class="shelf-item__infos--installments">installments</span>
-            </div>
-            <footer>
-              <button type="button">Comprar</button>
-            </footer>
-          </article>
-
-          <article class="shelf-item">
-            <figure class="shelf-item__image">
-              <img src="./img/img_3.png" alt="Product name" />
-            </figure>
-            <div class="shelf-item__infos">
-              <span class="shelf-item__infos--name">Producname</span>
-              <span class="shelf-item__infos--price">price</span>
-              <span class="shelf-item__infos--installments">installments</span>
-            </div>
-            <footer>
-              <button type="button">Comprar</button>
-            </footer>
-          </article>
-
-          <article class="shelf-item">
-            <figure class="shelf-item__image">
-              <img src="./img/img_4.png" alt="Product name" />
-            </figure>
-            <div class="shelf-item__infos">
-              <span class="shelf-item__infos--name">Producname</span>
-              <span class="shelf-item__infos--price">price</span>
-              <span class="shelf-item__infos--installments">installments</span>
-            </div>
-            <footer>
-              <button type="button">Comprar</button>
-            </footer>
-          </article>
-
-          <article class="shelf-item">
-            <figure class="shelf-item__image">
-              <img src="./img/img_5.png" alt="Product name" />
-            </figure>
-            <div class="shelf-item__infos">
-              <span class="shelf-item__infos--name">Producname</span>
-              <span class="shelf-item__infos--price">price</span>
-              <span class="shelf-item__infos--installments">installments</span>
-            </div>
-            <footer>
-              <button type="button">Comprar</button>
-            </footer>
-          </article>
-
-          <article class="shelf-item">
-            <figure class="shelf-item__image">
-              <img src="./img/img_6.png" alt="Product name" />
-            </figure>
-            <div class="shelf-item__infos">
-              <span class="shelf-item__infos--name">Producname</span>
-              <span class="shelf-item__infos--price">price</span>
-              <span class="shelf-item__infos--installments">installments</span>
-            </div>
-            <footer>
-              <button type="button">Comprar</button>
-            </footer>
-          </article>
-
-          <article class="shelf-item">
-            <figure class="shelf-item__image">
-              <img src="./img/img_7.png" alt="Product name" />
-            </figure>
-            <div class="shelf-item__infos">
-              <span class="shelf-item__infos--name">Producname</span>
-              <span class="shelf-item__infos--price">price</span>
-              <span class="shelf-item__infos--installments">installments</span>
-            </div>
-            <footer>
-              <button type="button">Comprar</button>
-            </footer>
-          </article>
-
-          <article class="shelf-item">
-            <figure class="shelf-item__image">
-              <img src="./img/img_8.png" alt="Product name" />
-            </figure>
-            <div class="shelf-item__infos">
-              <span class="shelf-item__infos--name">Producname</span>
-              <span class="shelf-item__infos--price">price</span>
-              <span class="shelf-item__infos--installments">installments</span>
-            </div>
-            <footer>
-              <button type="button">Comprar</button>
-            </footer>
-          </article>
-
-          <article class="shelf-item">
-            <figure class="shelf-item__image">
-              <img src="./img/img_9.png" alt="Product name" />
-            </figure>
-            <div class="shelf-item__infos">
-              <span class="shelf-item__infos--name">Producname</span>
-              <span class="shelf-item__infos--price">price</span>
-              <span class="shelf-item__infos--installments">installments</span>
-            </div>
-            <footer>
-              <button type="button">Comprar</button>
-            </footer>
-          </article>
-        </section>
+        <div class="shelf"></div>
       </div>
     </main>
   </body>
