@@ -1,0 +1,33 @@
+.shelf {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4rem;
+
+  &-item {
+    &__infos {
+      text-align: center;
+
+      > span { display: block; }
+
+      &--name {
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+
+      &--price {
+        font-weight: 700;
+        font-size: 1rem;
+      }
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      background: $preto;
+      color: $branco;
+      text-transform: uppercase;
+      border: none;
+    }
+  }
+}

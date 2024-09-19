@@ -1,1 +1,28 @@
+@import 'variables';
+
 @import "reset";
+@import 'header';
+@import 'category';
+@import 'shelf';
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: $preto;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2rem; 
+}
+
+select {
+  height: 100%;
+  padding: 10px 8px 10px 10px;
+
+  font-size: 1rem;
+  font-weight: 400;
+}

@@ -1,19 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+    </style>
+    <title>Desenvolvedor Cadastra</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedor Cadastra</title>
-  <link rel="stylesheet" href="main.css" />
-</head>
+  <body>
+    <header>
+      <div class="container">
+        <img src="./img/logo.svg" alt="Logo cadastra" />
 
-<body>
+        <img src="./img/lock.svg" alt="Cart" />
+      </div>
+    </header>
 
-</body>
-<h1>Desafio Cadastra</h1>
+    <main class="container">
+      <div class="categoryHeader">
+        <h1>Blusas</h1>
 
-<script src="bundle.js"></script>
+        <div class="categoryHeader-orderBy">
+          <select name="OrderBy" id="OrderBy">
+            <option value="default">Ordenar por:</option>
+            <option value="Asc">Mais recentes</option>
+            <option value="lowerPrice">Menor Preço</option>
+            <option value="higherPrice">Maior Preço</option>
+          </select>
+        </div>
+      </div>
 
+      <div class="category-content">
+        <aside>
+          <div>
+            <fieldset>
+              <legend>Cores</legend>
+
+              <div>
+                <input type="checkbox" id="Amarelo" name="Amarelo" />
+                <label for="amarelo">Amarelo</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="Azul" name="Azul" />
+                <label for="Azul">Azul</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="Branco" name="Branco" />
+                <label for="Branco">Branco</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="Cinza" name="Cinza" />
+                <label for="Cinza">Cinza</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="Laranja" name="Laranja" />
+                <label for="Laranja">Laranja</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="Verde" name="Verde" />
+                <label for="Verde">Verde</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="Vermelho" name="Vermelho" />
+                <label for="Vermelho">Vermelho</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="Preto" name="Preto" />
+                <label for="Preto">Preto</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="Rosa" name="Rosa" />
+                <label for="Rosa">Rosa</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="Vinho" name="Vinho" />
+                <label for="Vinho">Vinho</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div>
+            <fieldset>
+              <legend>Tamanhos</legend>
+
+              <div>
+                <input type="checkbox" id="p" name="p" />
+                <label for="p">p</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="m" name="m" />
+                <label for="m">m</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="g" name="g" />
+                <label for="g">g</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="gg" name="gg" />
+                <label for="gg">gg</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="u" name="u" />
+                <label for="u">u</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="36" name="36" />
+                <label for="36">36</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="38" name="38" />
+                <label for="38">38</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="40" name="40" />
+                <label for="40">40</label>
+              </div>
+            </fieldset>
+          </div>
+        </aside>
+
+        <section class="shelf">
+          <article class="shelf-item">
+            <figure class="shelf-item__image">
+              <img src="./img/img_2.png" alt="Product name" />
+            </figure>
+            <div class="shelf-item__infos">
+              <span class="shelf-item__infos--name">Producname</span>
+              <span class="shelf-item__infos--price">price</span>
+              <span class="shelf-item__infos--installments">installments</span>
+            </div>
+            <footer>
+              <button type="button">Comprar</button>
+            </footer>
+          </article>
+
+          <article class="shelf-item">
+            <figure class="shelf-item__image">
+              <img src="./img/img_10.png" alt="Product name" />
+            </figure>
+            <div class="shelf-item__infos">
+              <span class="shelf-item__infos--name">Producname</span>
+              <span class="shelf-item__infos--price">price</span>
+              <span class="shelf-item__infos--installments">installments</span>
+            </div>
+            <footer>
+              <button type="button">Comprar</button>
+            </footer>
+          </article>
+
+          <article class="shelf-item">
+            <figure class="shelf-item__image">
+              <img src="./img/img_3.png" alt="Product name" />
+            </figure>
+            <div class="shelf-item__infos">
+              <span class="shelf-item__infos--name">Producname</span>
+              <span class="shelf-item__infos--price">price</span>
+              <span class="shelf-item__infos--installments">installments</span>
+            </div>
+            <footer>
+              <button type="button">Comprar</button>
+            </footer>
+          </article>
+
+          <article class="shelf-item">
+            <figure class="shelf-item__image">
+              <img src="./img/img_4.png" alt="Product name" />
+            </figure>
+            <div class="shelf-item__infos">
+              <span class="shelf-item__infos--name">Producname</span>
+              <span class="shelf-item__infos--price">price</span>
+              <span class="shelf-item__infos--installments">installments</span>
+            </div>
+            <footer>
+              <button type="button">Comprar</button>
+            </footer>
+          </article>
+
+          <article class="shelf-item">
+            <figure class="shelf-item__image">
+              <img src="./img/img_5.png" alt="Product name" />
+            </figure>
+            <div class="shelf-item__infos">
+              <span class="shelf-item__infos--name">Producname</span>
+              <span class="shelf-item__infos--price">price</span>
+              <span class="shelf-item__infos--installments">installments</span>
+            </div>
+            <footer>
+              <button type="button">Comprar</button>
+            </footer>
+          </article>
+
+          <article class="shelf-item">
+            <figure class="shelf-item__image">
+              <img src="./img/img_6.png" alt="Product name" />
+            </figure>
+            <div class="shelf-item__infos">
+              <span class="shelf-item__infos--name">Producname</span>
+              <span class="shelf-item__infos--price">price</span>
+              <span class="shelf-item__infos--installments">installments</span>
+            </div>
+            <footer>
+              <button type="button">Comprar</button>
+            </footer>
+          </article>
+
+          <article class="shelf-item">
+            <figure class="shelf-item__image">
+              <img src="./img/img_7.png" alt="Product name" />
+            </figure>
+            <div class="shelf-item__infos">
+              <span class="shelf-item__infos--name">Producname</span>
+              <span class="shelf-item__infos--price">price</span>
+              <span class="shelf-item__infos--installments">installments</span>
+            </div>
+            <footer>
+              <button type="button">Comprar</button>
+            </footer>
+          </article>
+
+          <article class="shelf-item">
+            <figure class="shelf-item__image">
+              <img src="./img/img_8.png" alt="Product name" />
+            </figure>
+            <div class="shelf-item__infos">
+              <span class="shelf-item__infos--name">Producname</span>
+              <span class="shelf-item__infos--price">price</span>
+              <span class="shelf-item__infos--installments">installments</span>
+            </div>
+            <footer>
+              <button type="button">Comprar</button>
+            </footer>
+          </article>
+
+          <article class="shelf-item">
+            <figure class="shelf-item__image">
+              <img src="./img/img_9.png" alt="Product name" />
+            </figure>
+            <div class="shelf-item__infos">
+              <span class="shelf-item__infos--name">Producname</span>
+              <span class="shelf-item__infos--price">price</span>
+              <span class="shelf-item__infos--installments">installments</span>
+            </div>
+            <footer>
+              <button type="button">Comprar</button>
+            </footer>
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
+
+  <script src="bundle.js"></script>
 </html>
