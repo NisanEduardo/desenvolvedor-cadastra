@@ -9,6 +9,8 @@ aside {
   }
 
   .openFiltersContext {
+    cursor: pointer;
+
     border: 1px solid $cinza2;
     background-color: transparent;
 
@@ -18,10 +20,14 @@ aside {
 
     width: 100%;
     height: 49px;
+
+    @media (width >= 769px) {
+      display: none;
+    }
   }
 
   .orderByContext {
-    @media (width >= 768px) {
+    @media (width >= 769px) {
       display: none;
     }
   }
@@ -31,10 +37,22 @@ aside {
   &--container {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 100vh;
     background: $branco;
+
+    transition: all .5s;
+
+    @media (width >= 769px) {
+      position: relative;
+      width: auto;
+      left: 0;
+    }
+
+    &.active {
+      left: 0;
+    }
 
     header {
       font-size: 1.75rem;
@@ -45,7 +63,13 @@ aside {
 
       padding: auto 1rem;
 
+      @media (width >= 769px) {
+        display: none;
+      }
+
       span {
+        cursor: pointer;
+
         width: 18px;
         height: 18px;
 
@@ -60,15 +84,59 @@ aside {
     &__content {
       padding: 0 1rem;
 
+      @media (width >= 769px) {
+        padding: 0;
+      }
+
       &--options {
         max-height: 0;
         overflow: hidden;
 
+        margin-top: 20px;
+        margin-bottom: 15px;
+
         transition: all .5s;
+
+        @media (width >= 769px) {
+          max-height: 99em;
+        }
+        
+        &.__sizes {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 0.5rem;
+
+          max-width: 160px;
+
+          text-transform: uppercase;
+
+          > div {
+            width: 32px;
+            height: 32px;
+
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 1rem;
+
+            border: 1px solid $cinza2;
+
+            input {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              top: 0;
+              margin: 0;
+              opacity: 0;}
+          }
+        }
       }
 
       fieldset {
-        margin: 15px 0;
         cursor: pointer;
         
         legend {
@@ -95,6 +163,14 @@ aside {
             background-size: 100%;
             background-repeat: no-repeat;
             background-image: url('data:image/svg+xml,<svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L10 14L19 1.0135" stroke="%23666666" stroke-linecap="round"/></svg>');
+          }
+
+          @media (width >= 769px) {
+            font-size: 1rem;
+
+            span {
+              display: none;
+            }
           }
         }
       }

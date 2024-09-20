@@ -1,0 +1,41 @@
+#loadMoreProducts {
+  background-color: $primaria;
+
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: $branco;
+
+  text-transform: uppercase;
+
+  border: none;
+  padding: 8px 1.875rem;
+  margin: 0 auto;
+
+
+  display: block;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: $cinza2;
+    cursor: not-allowed;
+  }
+}
+
+footer {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $preto;
+
+  div {
+    p {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: $branco;
+
+      text-transform: uppercase;
+      text-align: center;
+      
+      margin-top: 2.625rem;
+      padding: 0.625rem 0;
+    }
+  }
+}

@@ -16,7 +16,10 @@
       <div class="container">
         <img src="./img/logo.svg" alt="Logo cadastra" />
 
-        <img src="./img/lock.svg" alt="Cart" />
+        <div class="cartIcon">
+          <img src="./img/lock.svg" alt="Cart" />
+          <span id="itensOnCart"> 0 </span>
+        </div>
       </div>
     </header>
 
@@ -36,10 +39,6 @@
 
       <div class="category-content">
         <aside>
-          <div class="orderByContext">
-            <button class="openFiltersContext" id="openOrderBy">Ordenar</button>
-          </div>
-
           <div class="filterByContext">
             <button class="openFiltersContext" id="openFilterBy">
               Filtrar
@@ -52,8 +51,10 @@
               </header>
 
               <section class="filterByContext--container__content">
-                <fieldset class="openFilterContextMenu">
-                  <legend>Cores <span></span></legend>
+                <fieldset>
+                  <legend class="openFilterContextMenu">
+                    Cores <span></span>
+                  </legend>
 
                   <div class="filterByContext--container__content--options">
                     <div>
@@ -108,10 +109,14 @@
                   </div>
                 </fieldset>
 
-                <fieldset class="openFilterContextMenu">
-                  <legend>Tamanhos <span></span></legend>
+                <fieldset>
+                  <legend class="openFilterContextMenu">
+                    Tamanhos <span></span>
+                  </legend>
 
-                  <div class="filterByContext--container__content--options">
+                  <div
+                    class="filterByContext--container__content--options __sizes"
+                  >
                     <div>
                       <input type="checkbox" id="p" name="p" />
                       <label for="p">p</label>
@@ -151,16 +156,47 @@
                       <input type="checkbox" id="40" name="40" />
                       <label for="40">40</label>
                     </div>
+
+                    <div>
+                      <input type="checkbox" id="36" name="36" />
+                      <label for="36">36</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="38" name="38" />
+                      <label for="38">38</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="40" name="40" />
+                      <label for="40">40</label>
+                    </div>
                   </div>
                 </fieldset>
               </section>
             </div>
           </div>
+
+          <div class="orderByContext">
+            <button class="openFiltersContext" id="openOrderBy">Ordenar</button>
+          </div>
         </aside>
 
         <div class="shelf"></div>
       </div>
+
+      <div>
+        <button disabled type="button" id="loadMoreProducts">
+          Carregar mais
+        </button>
+      </div>
     </main>
+
+    <footer>
+      <div>
+        <p>CADASTRA: Implantação de E-commerce VTEX</p>
+      </div>
+    </footer>
   </body>
 
   <script src="bundle.js"></script>

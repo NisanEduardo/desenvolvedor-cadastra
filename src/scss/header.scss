@@ -3,9 +3,41 @@ header {
   border-bottom: 2px solid rgba(199,199,199,1);
   margin-bottom: 24px;
 
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    background: $branco;
+    padding: 26px 0;
+    z-index: 1;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
+
+    .cartIcon {
+      position: relative;
+
+      
+
+      #itensOnCart {
+        font-size: 0.625rem;
+        color: $branco;
+
+        background-color: $primaria;
+        border-radius: 100%;
+
+        position: absolute;
+        bottom: 0;
+        right: -7px;
+        width: 15px;
+        height: 16px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 
   @media (width >= 768px) {
