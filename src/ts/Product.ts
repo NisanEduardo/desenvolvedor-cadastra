@@ -156,7 +156,7 @@ export class Product {
 		this.populateShelf(
 			this.productListContainerEl,
 			this.slicedProducts,
-			() => false,
+			this.handleAddItemOnCart,
 		);
 
 		if (this.slicedProducts.length >= this.allProducts.length) {
@@ -183,7 +183,7 @@ export class Product {
 				this.populateShelf(
 					this.productListContainerEl,
 					this.slicedProducts,
-					() => false,
+					this.handleAddItemOnCart,
 				);
 			});
 		} catch (err) {

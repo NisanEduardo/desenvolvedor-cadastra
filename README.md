@@ -1,6 +1,24 @@
+## Instruções para rodar o projeto
+
+- Somente rodar `npm install` para rodar as novas dependências
+- rodar `npm start` para dar start no projeto
+- acessar a url de develop http://localhost:3000
+
+### Meus dados de contato
+
+eduardoleitefrontend@gmail.com
+
+### Obs.:
+
+Até iniciei o desenvolvimento do filtro de produtos por tamanho, cor e preço mas fiquei com receio de perder o prazo para entrega da etapa técnica, portanto ficou com esse déficit na minha entrega
+
+### Obs2.:
+
+Tentei usar alguns plugins de otimização de imagens do gulp mas estavam dando erro e não consegui rodá-los no projeto, então é outro déficit na minha entrega de case técnica
+
 # Venha ser um desenvolvedor da Cadastra
 
-Olá! Somos a Cadastra, uma Next-Gen Company que oferece soluções globais em marketing, tecnologia, estratégia de negócios, commerce, dados e analytics. Este desafio é voltado para o nosso Centro de Excelência (COE) de Commerce, especializado em implantação, migração, evolução e otimização de e-commerce.  Contamos com escritórios em 5 países, mas num formato de trabalho 100% home office.
+Olá! Somos a Cadastra, uma Next-Gen Company que oferece soluções globais em marketing, tecnologia, estratégia de negócios, commerce, dados e analytics. Este desafio é voltado para o nosso Centro de Excelência (COE) de Commerce, especializado em implantação, migração, evolução e otimização de e-commerce. Contamos com escritórios em 5 países, mas num formato de trabalho 100% home office.
 
 Estamos em busca de Pessoas Desenvolvedoras `Front-end`, com sólidos conhecimentos em HTML, CSS e TS para projetar interfaces e entregar a melhor experiência para os consumidores visando sempre a otimização do código e agilidade no desenvolvimento.
 
@@ -25,7 +43,7 @@ Estamos em busca de Pessoas Desenvolvedoras `Front-end`, com sólidos conhecimen
 - Conhecimento/Experiência em Vtex
 - Nodejs
 
-----
+---
 
 ## Como se candidatar a vaga
 
@@ -34,7 +52,6 @@ Estamos em busca de Pessoas Desenvolvedoras `Front-end`, com sólidos conhecimen
 - Atualize o readme com as instruções necessárias para rodar o seu código;
 - Adicione também seu e-mail de contato ao readme do projeto ( caso seu e-mail do github esteja privado )
 - envie para [vinicius.delfino@cadastra.com](mailto:vinicius.delfino@cadastra.com?subject=Vaga%20DEV%20-%20Cadastra) com cópia para [andresa.klein@cadastra.com](mailto:andresa.klein?subject=Vaga%20DEV%20-%20Cadastra)
- 
 
 **obs.**: link do projeto [github.com/Cadastra-Next-Gen-Company/desenvolvedor-cadastra](https://github.com/Cadastra-Next-Gen-Company/desenvolvedor-cadastra)
 
@@ -51,12 +68,14 @@ Para instalar as dependências só é preciso executar o comando: `npm install`
 O dar start no server e nos processos para desenvolvimento é necessário rodar o comando: `npm start `
 
 Uma ver que o comando é dado ele irá levantar 2 servidores, sendo eles:
- - um para acessar o front-end que roda na porta 3000. No qual pode ser acessado pela url: http://localhost:3000
- - um para o json-server que irá export uma api com a lista de produtos que roda na porta 5000. Para acessar os produtos é na url:  http://localhost:5000/products
+
+- um para acessar o front-end que roda na porta 3000. No qual pode ser acessado pela url: http://localhost:3000
+- um para o json-server que irá export uma api com a lista de produtos que roda na porta 5000. Para acessar os produtos é na url: http://localhost:5000/products
 
 ### Objetivo
 
 O objetivo desse desafio é avaliar a seus conhecimentos fundamentais de front end, por isso pedimos que não utilize nenhum framework, porem caso deseje utilizar frameworks como react, é possível adicionar ao setup.
+
 ### Obrigatório
 
 - HTML5 e CSS3

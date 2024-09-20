@@ -1,6 +1,3 @@
-const imagemin = import("gulp-imagemin");
-const { optipng } = import("gulp-imagemin");
-
 const path = require("path");
 
 const { series, src, dest, parallel, watch } = require("gulp");
@@ -23,7 +20,6 @@ const paths = {
 	},
 	img: {
 		src: "src/img/**/*",
-		dest: "src/img/minified",
 	},
 	html: {
 		src: "src/index.html",
@@ -42,12 +38,6 @@ function server() {
 			baseDir: "./dist",
 		},
 	});
-}
-
-function imagesOptimize() {
-	return src(paths.img.src)
-		.pipe(imagemin([optipng({ optimizationLevel: 5 })]))
-		.pipe(dest(paths.img.dest));
 }
 
 function styles() {
@@ -96,10 +86,7 @@ function img() {
 	return src(paths.img.src).pipe(dest(paths.dest + "/img"));
 }
 
-const build = series(
-	clean,
-	parallel(styles, scripts, html, img, imagesOptimize),
-);
+const build = series(clean, parallel(styles, scripts, html, img));
 const dev = () => {
 	watch(paths.scripts.watch, { ignoreInitial: false }, scripts).on(
 		"change",
@@ -107,7 +94,6 @@ const dev = () => {
 	);
 	watch(paths.styles.src, { ignoreInitial: false }, styles);
 	watch(paths.img.src, { ignoreInitial: false }, img);
-	watch(paths.img.src, { ignoreInitial: false }, imagesOptimize);
 	watch(paths.html.src, { ignoreInitial: false }, html).on(
 		"change",
 		browserSync.reload,
@@ -118,6 +104,5 @@ const dev = () => {
 exports.build = build;
 exports.server = server;
 exports.styles = styles;
-exports.imagesOptimize = imagesOptimize;
 exports.scripts = scripts;
 exports.default = dev;
