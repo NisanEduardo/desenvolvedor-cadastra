@@ -35,14 +35,11 @@ export class Product {
 	}
 
 	async sortProducts(selectOrderBy: HTMLSelectElement, serverUrl: string) {
-		const response = await axios.get(`${serverUrl}/products`);
-		const products = await response.data;
-
 		let sortedProducts: IProduct[];
 
 		switch (selectOrderBy.value) {
 			case "Asc":
-				sortedProducts = products.sort(
+				sortedProducts = this.slicedProducts.sort(
 					(productA: IProduct, productB: IProduct) => {
 						if (productA.price < productB.price) {
 							return 1;
@@ -54,7 +51,7 @@ export class Product {
 				break;
 
 			case "lowerPrice":
-				sortedProducts = products.sort(
+				sortedProducts = this.slicedProducts.sort(
 					(productA: IProduct, productB: IProduct) => {
 						if (productA.price > productB.price) {
 							return 1;
@@ -66,7 +63,7 @@ export class Product {
 				break;
 
 			case "higherPrice":
-				sortedProducts = products.sort(
+				sortedProducts = this.slicedProducts.sort(
 					(productA: IProduct, productB: IProduct) => {
 						if (productA.price < productB.price) {
 							return 1;
@@ -78,7 +75,7 @@ export class Product {
 				break;
 
 			default:
-				sortedProducts = products;
+				sortedProducts = this.slicedProducts;
 		}
 
 		this.populateShelf(
